@@ -1,6 +1,10 @@
-import org.junit.jupiter.api;
+import org.junit.jupiter.api.*;
 
-public class TestSlipperySlots {
+//org.junit.jupiter.api.*;
+
+
+
+public class TestSlipperySlot {
 
     @Test
     public void testJackpot() {
