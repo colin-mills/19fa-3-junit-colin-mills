@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="19fa-3-junit-colin-mills">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/junit-platform-console-standalone-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SlipperySlot.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
