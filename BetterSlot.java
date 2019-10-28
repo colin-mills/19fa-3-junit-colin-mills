@@ -1,11 +1,17 @@
-
+/**
+ * @author Colin Mills
+ */
 
 public class BetterSlot {
 
+    /**
+     *
+     * @return an array of size 5 populated with random numbers between 1-50
+     */
     public int[] pullTheLever() {
         int[] slotArray = new int[]{0, 0, 0, 0, 0};
 
-        for(int i=0; i<5; i++) {
+        for (int i=0; i<5; i++) {
             double randomNumber = Math.random();
             randomNumber = (randomNumber * 50) + 1;
             int slotNumber = (int) randomNumber;
@@ -15,6 +21,11 @@ public class BetterSlot {
         return slotArray;
     }//END pullTheLever
 
+    /**
+     *
+     * @param values the array of size 5 populated in pullTheLever() that will be used to calculate payOut
+     * @return returns int of the appropriate payout
+     */
     int payOff( int[] values ) {
         //Initialize all variables
         int one, two, three, four, five, countOne, countTwo, countThree, countFour, countFive, payout;
@@ -49,12 +60,12 @@ public class BetterSlot {
         }
 
         //Evaluate what will be won based on count
-        if(countOne == 5 || countTwo == 5 ||countThree == 5 ||countFour == 5 ||countFive == 5) {isJackpot = true;}
-        if(countOne == 4 || countTwo == 4 ||countThree == 4 ||countFour == 4 ||countFive == 4) {isFourOfAKind = true;}
-        if(countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {isTwoOfAKind = true;}
-        if(countOne == 3 || countTwo == 3 ||countThree == 3 ||countFour == 3 ||countFive == 3) {
+        if (countOne == 5 || countTwo == 5 ||countThree == 5 ||countFour == 5 ||countFive == 5) {isJackpot = true;}
+        if (countOne == 4 || countTwo == 4 ||countThree == 4 ||countFour == 4 ||countFive == 4) {isFourOfAKind = true;}
+        if (countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {isTwoOfAKind = true;}
+        if (countOne == 3 || countTwo == 3 ||countThree == 3 ||countFour == 3 ||countFive == 3) {
             isThreeOfAKind = true;
-            if(countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {
+            if (countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {
                 isTwoOfAKind = false;
                 isThreeOfAKind = false;
                 isFullHouse = true;
@@ -62,14 +73,14 @@ public class BetterSlot {
         }//End Test for Three of a kind
 
         //Sum up payouts
-        if(isJackpot) {payout += 1000000;}
-        if(isFourOfAKind) {payout += 10000;}
-        if(isThreeOfAKind) {payout += 100;}
-        if(isFullHouse) {payout += 5000;}
-        if(isTwoOfAKind) {payout += 10;}
-        if(isFortyTwo) {payout += 2;}
-        if(isPowTwo) {payout += 3;}
-        if(isPerfSquare) {payout += 7;}
+        if (isJackpot) {payout += 1000000;}
+        if (isFourOfAKind) {payout += 10000;}
+        if (isThreeOfAKind) {payout += 100;}
+        if (isFullHouse) {payout += 5000;}
+        if (isTwoOfAKind) {payout += 10;}
+        if (isFortyTwo) {payout += 2;}
+        if (isPowTwo) {payout += 3;}
+        if (isPerfSquare) {payout += 7;}
 
         return payout;
     }//END payOff
