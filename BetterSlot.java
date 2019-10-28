@@ -28,6 +28,7 @@ public class BetterSlot {
         three = values[2];
         four = values[3];
         five = values[4];
+
         //Loop through array to determine count of numbers and find bonuses
         for (int number: values) {
             if (number == one) {countOne++;}
@@ -46,6 +47,7 @@ public class BetterSlot {
                 isPerfSquare = true;
             }//Test for perfect square
         }
+
         //Evaluate what will be won based on count
         if(countOne == 5 || countTwo == 5 ||countThree == 5 ||countFour == 5 ||countFive == 5) {isJackpot = true;}
         if(countOne == 4 || countTwo == 4 ||countThree == 4 ||countFour == 4 ||countFive == 4) {isFourOfAKind = true;}
@@ -58,6 +60,7 @@ public class BetterSlot {
                 isFullHouse = true;
             }//End test for full house
         }//End Test for Three of a kind
+
         //Sum up payouts
         if(isJackpot) {payout += 1000000;}
         if(isFourOfAKind) {payout += 10000;}
