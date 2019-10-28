@@ -49,14 +49,15 @@ public class BetterSlot {
         //Evaluate what will be won based on count
         if(countOne == 5 || countTwo == 5 ||countThree == 5 ||countFour == 5 ||countFive == 5) {isJackpot = true;}
         if(countOne == 4 || countTwo == 4 ||countThree == 4 ||countFour == 4 ||countFive == 4) {isFourOfAKind = true;}
+        if(countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {isTwoOfAKind = true;}
         if(countOne == 3 || countTwo == 3 ||countThree == 3 ||countFour == 3 ||countFive == 3) {
             isThreeOfAKind = true;
             if(countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {
+                isTwoOfAKind = false;
                 isThreeOfAKind = false;
                 isFullHouse = true;
             }//End test for full house
         }//End Test for Three of a kind
-        if(countOne == 2 || countTwo == 2 ||countThree == 2 ||countFour == 2 ||countFive == 2) {isTwoOfAKind = true;}
         //Sum up payouts
         if(isJackpot) {payout += 1000000;}
         if(isFourOfAKind) {payout += 10000;}
